@@ -52,7 +52,7 @@ def create(request):
 
     # 4. create.html을 랜더링
     # 9. create.html을 랜더링
-    return render(request, 'create.html', context)
+    return render(request, 'form.html', context)
 
 def delete(request, id):
     article = Article.objects.get(id=id)
@@ -75,4 +75,4 @@ def update(request, id):
         'form': form,
     }
 
-    return render(request, 'update.html', context)
+    return render(request, 'form.html', context)
